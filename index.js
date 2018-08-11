@@ -7,10 +7,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-app.get('/',(req,res)=>{
-    res.send("Hello EthIndia !");
-});
-
 app.use(express.static('public'));
 PORT = 3000;
 app.listen(process.env.PORT || PORT, () => console.log(`Durga app listening on port ${PORT}!`));
