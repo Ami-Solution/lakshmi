@@ -13,15 +13,28 @@
     <title>DURGA</title>
 </head>
 <body>
+    <nav class="black darken-1 navbar-fixed">
+        <div class="nav-wrapper center">
+            <div class="step">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Welcome</a>
+                    <a href="#!" class="breadcrumb">Request Loan</a>
+                    <a href="#!" class="breadcrumb">Accept Terms</a>
+                    <a href="#!" class="breadcrumb hide">Receive Loan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="container">
-        <div class="m-vwrapper m-center">   
+
+        <div class="m-vwrapper m-center onboard-step-1">   
             <div class="row">
                     <div class="col s12 m10 push-m1">
                         
                         <!--OTP Card -->
-                        <div id="otp-card" class="card">
+                        <div id="otp-card" class="card flat-in-small">
                             <div class="card-content blue-grey-text center">
-                                <div class="card-title">Enter Number #</div>
+                                <div class="card-title">Enter your phone number to get an OTP</div>
                                 <div class="row">
                                     <div class="input-field col s12 m6 push-m3">
                                         <input id="phone" type="tel" max-length="12" class="validate center m-no-outline blue-grey-text" placeholder="+91 XXX-XXXX-XXX">
@@ -30,7 +43,7 @@
                                 
                                 <div class="row">
                                     <div class="col s6 push-s3">
-                                        <button id="sendOTP" class="btn waves-effect waves-light disabled" type="submit" name="action">SEND OTP
+                                        <button id="sendOTP" class="btn black waves-effect waves-light disabled" type="submit" name="action">GET OTP
                                             <i class="material-icons right">send</i>
                                         </button>
                                     </div>
@@ -39,11 +52,12 @@
                         </div>
 
                         <!--OTP Verify Card -->
-                        <div id="otp-verify-card" class="card hide">
+                        <div id="otp-verify-card" class="card hide flat-in-small">
                                 <div class="card-content blue-grey-text center">
-                                    <div class="card-title">Enter OTP #</div>
                                     <div class="row">
-                                        <h4 id="number">+91 8951440987</h4>
+                                        <span class="center">Your Number</span>
+                                        <div id="number">+91 8951440987</div>
+                                        <div class="m-large">Enter the code sent via SMS</div>
                                         <div class="input-field col s12 m6 push-m3">
                                             <input id="otp" type="tel" max-length="4" class="blue-grey-text validate center m-no-outline" placeholder="X X X X X X">
                                         </div>
@@ -51,14 +65,219 @@
                                     
                                     <div class="row">
                                         <div class="col s6 push-s3">
-                                            <button id="sendOTP" class="btn waves-effect waves-light disabled" type="submit" name="action">CONFIRM OTP
+                                            <button id="verifyOTP" class="btn black waves-effect waves-light disabled" type="submit" name="action">CONFIRM OTP
                                                 <i class="material-icons right">send</i>
                                             </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12 m6 push-m3">
+                                            <a class="waves-effect waves-black btn-flat">Resend the OTP Message  </a>
+                                        </div>
+                                        <div class="col s12">        
+                                            <div class="col s12 m6 push-m3">
+                                                    <a class="waves-effect waves-black btn-flat">Change Phone Number</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                         </div>
                     </div>
+            </div>
+        </div>
+
+         <!-- SUBMIT LOAN SECTION  -->
+        <div class="card onboard-step-2 flat-in-small hide">
+            <div class="card-content blue-grey-text">
+                <h5 class="">Tell us how much you need to borrow</h5>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="0.00 INR" id="amount" type="text" class="validate m-no-outline">
+                    </div>
+                </div>
+
+                <h5 class="">Tell us the story of your business and what you will be using the money for</h5>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea  placeholder="Write your story here" id="idea-details" data-length="500" class="materialize-textarea m-no-outline"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h5>Add a good picture of you and your bussiness</h5>
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn white">
+                            <span><i class="material-icons black-text">add_a_photo</i></span>
+                            <input type="file" multiple>
+                            </div>
+                            <div class="file-path-wrapper">
+                            <input class="file-path validate m-no-outline" type="text" placeholder="Add Pictures">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a id="next" class="black waves-effect waves-light btn right">Next</a>
+            </div>
+        </div>
+
+        <!-- ADD MORE INFORMATION -->
+        <div class="card onboard-step-3 flat-in-small hide">
+                <div class="card-content blue-grey-text">
+                    <a id="edit-story" class="black waves-effect waves-light btn-small">Edit Story</a>
+                    <blockquote>Provide few more details about you</blockquote>
+                    <h5 class="">What's your name ?</h5>
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <input placeholder="Your full name here" id="amount" type="text" class="validate m-no-outline">
+                        </div>
+                    </div>
+
+                    <h5 class="">Where do you live ?</h5>
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <textarea placeholder="Street, Locality, City, Country &amp; Pincode" id="address" type="text" class=" materialize-textarea validate m-no-outline "></textarea>
+                        </div>
+                    </div>
+    
+                    <h5 class="">Add phone numberes of people who would vouch for you</h5>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <div class="phone-chips chips chips-placeholder m-no-outline .no-autoinit"></div>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <form action="#">
+                            <div class="file-field input-field">
+                                <div class="btn white">
+                                <span><i class="material-icons black-text">attach_file</i></span>
+                                <input type="file" multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                <input class="file-path validate m-no-outline" type="text" placeholder="Add Documents">
+                                <span class="helper-text">Upload supporting docs to proof your identity.</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <a id="submit-review" class="black waves-effect waves-light btn right">Submit for Review</a>
+                </div>
+            </div>
+        
+        <!-- Waiting for Application  Review -->
+        <div class="card onboard-step-4 flat-in-small hide">
+            <div class="card-title center">
+                    <h5>We are reading over your story and will get back to you in next few days.</h5>
+            </div>
+            <div class="card-content blue-grey-text center">
+                <div class="row">
+                    <div class="col s12 m6 push-m3">
+                        <div class="preloader-wrapper active hide">
+                                <div class="spinner-layer spinner-red-only">
+                                    <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                    </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                    </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <h5>We will send you a SMS when we are ready to offer you a loan.</h5>
+                    </div>
+                </div>
+                <a id="edit-info" class="black waves-effect waves-light btn center">Edit Information</a>
+                <!-- <span class="left">Application Under Review</span>
+                <span class="right hide-on-small-only">This might take a while..</span>
+                <div class="progress grey hide-on-small-only">
+                    <div class="indeterminate black" style="width: 10%"></div>
+                </div> -->
+            </div>
+        </div>
+
+         <!-- Accept Terms -->
+         <div class="card onboard-step-5 flat-in-small hide">
+            <div class="card-title center"><h5>Thanks for waiting! We are ready to offer you a loan.</h5></div>
+            <div class="card-content blue-grey-text">
+                <div class="row">
+                    <div class="col s12 m6 push-m3 center">
+                        <br>
+                        <h5>
+                            We will instantly transfer <div class="m-offer-text" id="offer-amount">50,000 INR</div>
+                            to your wallet if you agree to paying back <div class="m-offer-text" id="offer-amount">2,300 INR</div>
+                            per month for <div class="m-offer-text" id="offer-time">24 months</div> 
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 push-m3 center">
+                        <a id="accept-offer-term" class="black waves-effect waves-light btn center">Yes, I'm in</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="col s12 m4 push-m2 center">
+                            <a href="#" class="waves-effect waves-black btn-flat">No, I want more time to pay</a>
+                        </div>
+                        <div class="col s12 m4 push-m2 center">
+                                <a href="#" class="waves-effect waves-black btn-flat">No, I want to pay less interest</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirm Terms -->
+        <div class="card onboard-step-6 flat-in-small hide">
+                <div class="card-title center"><h4>Are you sure ?</h4></div>
+                <div class="card-content blue-grey-text">
+                    <div class="row">
+                        <div class="col s12 m6 push-m3 center">
+                            <h5>Once you confirm the terms, your phone number will be linked to your payment address.</h5>
+                            <br>
+                            <h5>
+                                Receive <span class="m-offer-text" id="offer-amount">50,000 INR</span>
+                                now and pay back <span class="m-offer-text" id="offer-amount">2,300 INR</span>
+                                for <div class="m-offer-text" id="offer-time">24 months</div> 
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m6 push-m3 center">
+                            <a id="confirm-offer-term" class="black waves-effect waves-light btn center">Confirm Terms</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="col s12 m6 push-m3 center">
+                                <a id="back-to-step-5" href="#" class="waves-effect waves-black btn-flat">Go Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Final Screen -->
+        <div class="card onboard-step-7 flat-in-small hide">
+            <div class="card-title center">
+                <h4>Hooray!</h4>
+                <h5>You received <div class="m-offer-text" id="received-amount">50,000 INR</div> in your wallet address.</h5>
+            </div>
+            <div class="card-content blue-grey-text">
+                <div class="row">
+                    <div class="col s12 m6 push-m3 center">
+                        <h5>
+                            We just sent you an SMS with a payment link. Please send <div class="m-offer-text" id="pay-amount-installment">2,300 INR</div> before
+                            <div class="m-offer-text" id="next-payment-date">September 11, 2018</div>
+                        </h5>
+
+                        <br>
+                        <h5>
+                            We wish you a great success in your ventures!
+                        </h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

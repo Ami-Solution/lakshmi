@@ -3,7 +3,7 @@ html, body, .m-vwrapper {
     overflow-x: hidden; 
 }
 
-.container{
+.container,.container-fluid{
     height: 100%;
 }
 
@@ -23,4 +23,52 @@ html, body, .m-vwrapper {
 
 #phone,#otp{
     font-size: 2em
+}
+
+.onboard-step-2 label, .onboard-step-2 input{
+    font-size: 1.5em !important;
+}
+
+#idea-details{
+    height: 100px !important;
+    font-size: 1.5rem;
+}
+
+#address{
+    height: 80px !important;
+    font-size: 1.5rem;
+}
+
+.breadcrumb{
+  color: rgba(255,255,255,0.7) !important;  
+}
+.breadcrumb.active{
+    color: white !important; 
+}
+
+blockquote{
+    border-left-color: black !important;
+}
+
+.m-large{
+    font-size: 2rem;
+}
+
+.card-title{
+    padding:8px;
+}
+
+.m-offer-text{
+    padding: 8px;
+    color:black;
+}
+
+#edit-info{
+    margin:8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card.flat-in-small {
+        box-shadow: none;
+    }
 }
