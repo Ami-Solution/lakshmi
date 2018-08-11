@@ -14,10 +14,57 @@
 </head>
 <body>
     <div class="container">
-        <h1>WELCOME !</h1>
+        <div class="m-vwrapper m-center hide">   
+            <div class="row">
+                    <div class="col s12 m10 push-m1">
+                        
+                        <!--OTP Card -->
+                        <div id="otp-card" class="card">
+                            <div class="card-content blue-grey-text center">
+                                <div class="card-title">Enter Number #</div>
+                                <div class="row">
+                                    <div class="input-field col s12 m6 push-m3">
+                                        <input id="phone" type="tel" max-length="12" class="validate center m-no-outline blue-grey-text" placeholder="+91 XXX-XXXX-XXX">
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col s6 push-s3">
+                                        <button id="sendOTP" class="btn waves-effect waves-light disabled" type="submit" name="action">SEND OTP
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--OTP Verify Card -->
+                        <div id="otp-verify-card" class="card hide">
+                                <div class="card-content blue-grey-text center">
+                                    <div class="card-title">Enter OTP #</div>
+                                    <div class="row">
+                                        <h4 id="number">+91 8951440987</h4>
+                                        <div class="input-field col s12 m6 push-m3">
+                                            <input id="otp" type="tel" max-length="4" class="blue-grey-text validate center m-no-outline" placeholder="X X X X X X">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col s6 push-s3">
+                                            <button id="sendOTP" class="btn waves-effect waves-light disabled" type="submit" name="action">CONFIRM OTP
+                                                <i class="material-icons right">send</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
     </div>
 
     <!--JavaScript at end of body for optimized loading-->
+    <script src="./lib/js/jquery.js"></script>
     <script type="text/javascript" src="lib/js/materialize.min.js"></script>
     <script src="./script/main.js"></script>
 </body>

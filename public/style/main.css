@@ -1,0 +1,26 @@
+html, body, .m-vwrapper {
+    height: 100%;
+    overflow-x: hidden; 
+}
+
+.container{
+    height: 100%;
+}
+
+.m-center{
+    position: relative;
+    top:25%;
+}
+
+.m-no-outline{
+    outline: none !important;
+    border: none !important;
+}
+
+#otp-card div{
+    padding: 8px;
+}
+
+#phone,#otp{
+    font-size: 2em
+}
