@@ -54,7 +54,9 @@ function getModel(){
    var number = localStorage.getItem("userId");
    if(number){
      $.get("/getModel/"+number).then((res)=>{
-        Info = res;
+        if(res!="")
+            Info = res;
+        else throw "empty";
         processState();
         prefillFields();
      }).catch(()=>{
