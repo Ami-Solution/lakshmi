@@ -320,6 +320,7 @@ getModel();
 
 /*** Make Transaction */
 function makeTransaction(callback){
-
+    var react = window.open("http://localhost:3001/");  
+    react.onunload = callback;
 }
 

@@ -103,9 +103,18 @@ app.post("/saveModel",(req,res)=>{
 app.post("/submitReview",(req,res)=>{
   var model = req.body;
   models[model.details.phone] = model;
-  saveModels();
   pendingReviews[model.details.phone] = models[model.details.phone];
+  var loan = pendingReviews[model.details.phone].details; 
+  pendingReviews[model.details.phone].loan.approved = true;
+  pendingReviews[model.details.phone].loan.amount = loan.amount + " INR";
+  pendingReviews[model.details.phone].loan.emi = (parseInt(loan.amount)/4)+" INR";
+  pendingReviews[model.details.phone].loan.term = "4 months";
+  pendingReviews[model.details.phone].loan.nextPaymenDate = "12th September 2018";
+  models[model.details.phone] = pendingReviews[model.details.phone];
   savePendingReviews();
+  loadPendingReviews();
+  saveModels();
+  loadModels();
   res.send(pendingReviews[model.details.phone]);
 });
 
