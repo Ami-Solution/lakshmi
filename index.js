@@ -15,9 +15,7 @@ loadModels =  function(){
 loadModels();
 
 saveModels = function(){
-  setTimeout(()=>{
-    fs.writeFileSync('./data.json', JSON.stringify(models) , 'utf-8'); 
-  },0);
+    fs.writeFileSync('./data.json', JSON.stringify(models) , 'utf-8');
 }
 
 var pendingReviews = {};
@@ -27,9 +25,7 @@ loadPendingReviews =  function(){
 loadPendingReviews();
 
 savePendingReviews = function(){
-  setTimeout(()=>{
     fs.writeFileSync('./pendingReviews.json', JSON.stringify(models) , 'utf-8'); 
-  },0);
 }
 
 var modelNode = {
@@ -102,20 +98,17 @@ app.post("/saveModel",(req,res)=>{
 
 app.post("/submitReview",(req,res)=>{
   var model = req.body;
+  var loan = model.details.amount; 
   models[model.details.phone] = model;
-  pendingReviews[model.details.phone] = models[model.details.phone];
-  var loan = pendingReviews[model.details.phone].details; 
+  pendingReviews[model.details.phone] = model;
   pendingReviews[model.details.phone].loan.approved = true;
-  pendingReviews[model.details.phone].loan.amount = loan.amount + " INR";
-  pendingReviews[model.details.phone].loan.emi = (parseInt(loan.amount)/4)+" INR";
+  pendingReviews[model.details.phone].loan.amount = loan + " INR";
+  pendingReviews[model.details.phone].loan.emi = (parseInt(loan)/4)+" INR";
   pendingReviews[model.details.phone].loan.term = "4 months";
   pendingReviews[model.details.phone].loan.nextPaymenDate = "12th September 2018";
-  models[model.details.phone] = pendingReviews[model.details.phone];
   savePendingReviews();
-  loadPendingReviews();
   saveModels();
-  loadModels();
-  res.send(pendingReviews[model.details.phone]);
+  res.send(model);
 });
 
 app.get("/loan/:id",(req,res)=>{

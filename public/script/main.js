@@ -37,7 +37,7 @@ var Info = {
        paymentLink: ""
     },
     details:{
-       phone: "",
+       phone: localStorage.getItem("userId"),
        story:"",
        amount:"",
        images: []
@@ -59,6 +59,7 @@ function getModel(){
         prefillFields();
      }).catch(()=>{
         console.error("Error loading model");
+        $(".onboard-step-1").removeClass("hide");
      })
    }else{
      $(".onboard-step-1").removeClass("hide");
