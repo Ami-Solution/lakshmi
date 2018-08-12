@@ -325,5 +325,15 @@ getModel();
 function makeTransaction(callback){
     var react = window.open("http://localhost:3001/");  
     react.onunload = callback;
+
+    /**
+         react.onunload = ()=>{
+            if(react.location.hash=="#success"){
+                callback();
+            }
+        }
+
+        rectend-> window.location.hash="#success"
+     */
 }
 
