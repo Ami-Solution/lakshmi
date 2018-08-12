@@ -27,7 +27,7 @@
     </nav>
     <div class="container">
 
-        <div class="m-vwrapper m-center onboard-step-1">   
+        <div class="m-vwrapper m-center onboard-step-1 hide">   
             <div class="row">
                     <div class="col s12 m10 push-m1">
                         
@@ -37,7 +37,7 @@
                                 <div class="card-title">Enter your phone number to get an OTP</div>
                                 <div class="row">
                                     <div class="input-field col s12 m6 push-m3">
-                                        <input id="phone" type="tel" max-length="12" class="validate center m-no-outline blue-grey-text" placeholder="+91 XXX-XXXX-XXX">
+                                        <input id="phone"  type="tel" max-length="12" class="validate center m-no-outline blue-grey-text" placeholder="+91 XXX-XXXX-XXX">
                                     </div>
                                 </div>
                                 
@@ -92,14 +92,14 @@
                 <h5 class="">Tell us how much you need to borrow</h5>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="0.00 INR" id="amount" type="text" class="validate m-no-outline">
+                        <input data-key="details.amount" placeholder="0.00 INR" id="amount" type="text" class="validate m-no-outline">
                     </div>
                 </div>
 
                 <h5 class="">Tell us the story of your business and what you will be using the money for</h5>
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea  placeholder="Write your story here" id="idea-details" data-length="500" class="materialize-textarea m-no-outline"></textarea>
+                        <textarea  data-key="details.story" placeholder="Write your story here" id="idea-details" data-length="500" class="materialize-textarea m-no-outline"></textarea>
                     </div>
                 </div>
 
@@ -109,13 +109,14 @@
                         <div class="file-field input-field">
                             <div class="btn white">
                             <span><i class="material-icons black-text">add_a_photo</i></span>
-                            <input type="file" multiple>
+                            <input data-key="details.images" type="file" multiple>
                             </div>
                             <div class="file-path-wrapper">
                             <input class="file-path validate m-no-outline" type="text" placeholder="Add Pictures">
                             </div>
                         </div>
                     </form>
+                    <div class="thumbs-wrapper circle"></div>
                 </div>
                 <a id="next" class="black waves-effect waves-light btn right">Next</a>
             </div>
@@ -129,21 +130,21 @@
                     <h5 class="">What's your name ?</h5>
                     <div class="row">
                         <div class="input-field col s12 m6">
-                            <input placeholder="Your full name here" id="amount" type="text" class="validate m-no-outline">
+                            <input data-key = "otherInfo.name" placeholder="Your full name here" id="amount" type="text" class="validate m-no-outline">
                         </div>
                     </div>
 
                     <h5 class="">Where do you live ?</h5>
                     <div class="row">
                         <div class="input-field col s12 m6">
-                            <textarea placeholder="Street, Locality, City, Country &amp; Pincode" id="address" type="text" class=" materialize-textarea validate m-no-outline "></textarea>
+                            <textarea data-key = "otherInfo.address" placeholder="Street, Locality, City, Country &amp; Pincode" id="address" type="text" class=" materialize-textarea validate m-no-outline "></textarea>
                         </div>
                     </div>
     
                     <h5 class="">Add phone numberes of people who would vouch for you</h5>
                     <div class="row">
                         <div class="input-field col s12">
-                            <div class="phone-chips chips chips-placeholder m-no-outline .no-autoinit"></div>
+                            <div data-key = "otherInfo.angels" class="phone-chips chips chips-placeholder m-no-outline .no-autoinit"></div>
                         </div>
                     </div>
     
@@ -152,7 +153,7 @@
                             <div class="file-field input-field">
                                 <div class="btn white">
                                 <span><i class="material-icons black-text">attach_file</i></span>
-                                <input type="file" multiple>
+                                <input data-key = "otherInfo.documents" type="file" multiple>
                                 </div>
                                 <div class="file-path-wrapper">
                                 <input class="file-path validate m-no-outline" type="text" placeholder="Add Documents">
@@ -204,9 +205,9 @@
                     <div class="col s12 m6 push-m3 center">
                         <br>
                         <h5>
-                            We will instantly transfer <div class="m-offer-text" id="offer-amount">50,000 INR</div>
-                            to your wallet if you agree to paying back <div class="m-offer-text" id="offer-amount">2,300 INR</div>
-                            per month for <div class="m-offer-text" id="offer-time">24 months</div> 
+                            We will instantly transfer <div class="m-offer-text" id="offer-amount-1">50,000 INR</div>
+                            to your wallet if you agree to paying back <div class="m-offer-text" id="offer-emi-1">2,300 INR</div>
+                            per month for <div class="m-offer-text" id="offer-time-1">24 months</div> 
                         </h5>
                     </div>
                 </div>
@@ -237,9 +238,9 @@
                             <h5>Once you confirm the terms, your phone number will be linked to your payment address.</h5>
                             <br>
                             <h5>
-                                Receive <span class="m-offer-text" id="offer-amount">50,000 INR</span>
-                                now and pay back <span class="m-offer-text" id="offer-amount">2,300 INR</span>
-                                for <div class="m-offer-text" id="offer-time">24 months</div> 
+                                Receive <span class="m-offer-text" id="offer-amount-2">50,000 INR</span>
+                                now and pay back <span class="m-offer-text" id="offer-emi-2">2,300 INR</span>
+                                for <div class="m-offer-text" id="offer-time-2">24 months</div> 
                             </h5>
                         </div>
                     </div>
