@@ -309,8 +309,17 @@ $("#back-to-step-5").on("click",()=>{
 })
 
 $("#confirm-offer-term").on("click",()=>{
-    Info.loan.confirmed = true;
-    saveModel(true);
+    makeTransaction(()=>{  
+        Info.loan.confirmed = true;
+        saveModel(true);
+    });
 });
 
 getModel();
+
+
+/*** Make Transaction */
+function makeTransaction(callback){
+
+}
+
