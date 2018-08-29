@@ -5,12 +5,12 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="lib/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/microlending/public/lib/css/materialize.min.css"  media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style/main.css">
-    <title>Lakshmi</title>
+    <title>microlending</title>
 </head>
 <body>
     <nav class="black darken-1 navbar-fixed">
@@ -27,64 +27,7 @@
     </nav>
     <div class="container">
 
-        <div class="m-vwrapper m-center onboard-step-1 hide">   
-            <div class="row">
-                    <div class="col s12 m10 push-m1">
-                        
-                        <!--OTP Card -->
-                        <div id="otp-card" class="card flat-in-small">
-                            <div class="card-content blue-grey-text center">
-                                <div class="card-title">Enter your phone number to get an OTP</div>
-                                <div class="row">
-                                    <div class="input-field col s12 m6 push-m3">
-                                        <input id="phone"  type="tel" max-length="12" class="validate center m-no-outline blue-grey-text" placeholder="+91 XXX-XXXX-XXX">
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col s6 push-s3">
-                                        <button id="sendOTP" class="btn black waves-effect waves-light disabled" type="submit" name="action">GET OTP
-                                            <i class="material-icons right">send</i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--OTP Verify Card -->
-                        <div id="otp-verify-card" class="card hide flat-in-small">
-                                <div class="card-content blue-grey-text center">
-                                    <div class="row">
-                                        <span class="center">Your Number</span>
-                                        <div id="number">+91 8951440987</div>
-                                        <div class="m-large">Enter the code sent via SMS</div>
-                                        <div class="input-field col s12 m6 push-m3">
-                                            <input id="otp" type="tel" max-length="4" class="blue-grey-text validate center m-no-outline" placeholder="X X X X">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="row">
-                                        <div class="col s6 push-s3">
-                                            <button id="verifyOTP" class="btn black waves-effect waves-light disabled" type="submit" name="action">CONFIRM OTP
-                                                <i class="material-icons right">send</i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col s12 m6 push-m3">
-                                            <a class="waves-effect waves-black btn-flat">Resend the OTP Message  </a>
-                                        </div>
-                                        <div class="col s12">        
-                                            <div class="col s12 m6 push-m3">
-                                                    <a class="waves-effect waves-black btn-flat">Change Phone Number</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
+ 
 
          <!-- SUBMIT LOAN SECTION  -->
         <div class="card onboard-step-2 flat-in-small hide">
