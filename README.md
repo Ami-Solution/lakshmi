@@ -13,9 +13,13 @@
 What is microlending ?
 
 # microlending
- microlending is a simple Mobile Dapp which uses Dharma protocol. You can use AMIS ERC20 Token to start microlending.
+Microlending is a simple Mobile Dapp which uses Dharma protocol. You can use AMIS ERC20 Token to start microlending.
  
  * source: ethindia
- * Works best with Metamask extension: install it metamask.io
+ * Works best with Metamask extension: install it @ metamask.io
  
  Project under development, contribute by issuing a PR github.com/ami-solution/microlending
+ 
+ # Project preview and sneek peak:
+ * [Glitch](https://glimmer-literature.glitch.me/)
+ * [Github.io](https://ami-solution.github.io/microlending/public)
