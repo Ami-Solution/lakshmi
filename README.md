@@ -20,6 +20,12 @@ Microlending is a simple Mobile Dapp which uses Dharma protocol. You can use AMI
  
  Project under development, contribute by issuing a PR github.com/ami-solution/microlending
  
- # Project preview and sneek peak:
+ # Project preview and sneak peek:
  * [Glitch](https://wary-kiss.glitch.me/)
  * [Github.io](https://ami-solution.github.io/microlending/public)
+ 
+ # Testing
+ Works with OTP
+ Enter your phone number like so : +918951440987
+ DUROTP
+ 231274A7Y7SKOlQx5b6f45b4

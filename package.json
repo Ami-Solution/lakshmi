@@ -1,7 +1,7 @@
 {
-  "name": "durga",
+  "name": "microlending",
   "version": "1.0.0",
-  "description": "",
+  "description": "Microlending",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,17 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nadirlaskar/durga.git"
+    "url": "git+https://github.com/ami-solution/microlending.git"
   },
   "keywords": [
-    "ethindia"
+    "ethindia",
+    "microlending",
+    "nodejs",
+    "glitch"
+    
   ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nadirlaskar/durga/issues"
+    "url": "https://github.com/ami-solution/microlending/issues"
   },
-  "homepage": "https://github.com/nadirlaskar/durga#readme",
+  "homepage": "https://github.com/ami-solution/microlending#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
