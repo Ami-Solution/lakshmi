@@ -141,7 +141,7 @@ app.get("/api/verifyOtp/:phone_number/:otp", function (req, res) {
 });
 
 PORT = 3000;
-app.listen(process.env.PORT || PORT, () => console.log(`Durga app listening on port ${PORT}!`));
+app.listen(process.env.PORT || PORT, () => console.log(`microlending app listening on port ${PORT}!`));
 
 
 function base64toString(s) {
